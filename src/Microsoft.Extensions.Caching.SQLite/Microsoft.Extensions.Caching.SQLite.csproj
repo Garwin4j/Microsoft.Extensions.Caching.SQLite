@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Description>Distributed cache implementation of Microsoft.Extensions.Caching.Distributed.IDistributedCache using SQLite.</Description>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>cache;distributedcache;sqlite</PackageTags>
+
+    <!-- Temporary workaround for API Check crash that is part of aspnet/BuildTools#201. -->
+    <EnableApiCheck>false</EnableApiCheck>
+    <Product>Gree.Microsoft.Extensions.Caching.SQLite</Product>
+    <Authors>Gree</Authors>
+    <Company>Gree Corporation.</Company>
+    <Copyright>© Gree Corporation. All rights reserved.</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/aspnet/Home/2.0.0/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl />
+    <RepositoryUrl />
+    <PackageIconUrl />
+    <Version>2.1.2</Version>
+    <PackageId>Gree.Microsoft.Extensions.Caching.SQLite</PackageId>
+    <AssemblyName>Gree.Microsoft.Extensions.Caching.SQLite</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="PlatformHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="$(MicrosoftExtensionsOptionsPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Extensions.Caching.Abstractions\Microsoft.Extensions.Caching.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

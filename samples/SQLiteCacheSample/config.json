@@ -1,0 +1,6 @@
+﻿{
+  //"SqlConnectionString": "Server=localhost;Database=CacheSampleDb;Trusted_Connection=True;",
+  "SQLiteConnectionString": "Filename=sqliteSamplecache.db",
+  //"SchemaName": "dbo",
+  "TableName": "TestCache"
+}
